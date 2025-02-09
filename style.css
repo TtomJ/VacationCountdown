@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: rgb(189, 221, 237);
+    padding: 1rem;
+    max-width: 100rem;
+    border-radius: 10px;
+    height: 80vh;
+}
+
+#background {
+    background: #f0f0f0; /* Fallback background color */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 90%; /* Make it responsive */
+    min-width: 20rem; /* Ensure minimum width */
+    height: 60%; /* Ensure the height is sufficient */
+    padding: 1rem;
+    border-radius: 10px; /* Apply border-radius */
+    overflow: hidden; /* Ensure the image is clipped within the border-radius */
+    transition: background-image 0.6s ease;
+}
+
+
+#countdown {
+    font-size: 2.8rem;
+    width: 100%; /* Make it responsive */
+    min-width: 20rem;
+    max-width: 30rem;
+    color: #333;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: .1rem 0;
+    box-sizing: border-box;
+    text-align: center;
+}

@@ -57,13 +57,21 @@ const imageUrls = [
 ];
 
 let index = 0;
+const images = [];
+
+// Preload images
+imageUrls.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+    images.push(img);
+});
 
 function changeBackground() {
     const backgroundElement = document.getElementById('background');
     backgroundElement.style.backgroundImage = `url(${imageUrls[index]})`;
-    index = (index + 1) % imageUrls.length; // Loop back to the start
+    index = (index + 1) % imageUrls.length;
 }
 
-// Change background every 5 seconds
-changeBackground(); // Initial call
+// Initial call and interval setup
+changeBackground();
 setInterval(changeBackground, 5000);
